@@ -1,0 +1,19 @@
+#evenement section button{
+    padding: 12px 24px;
+    background-image: linear-gradient(120deg, rgb(69, 155, 112), rgb(160, 255, 208));
+}
+
+#evenement section button:hover{
+    padding: 12px 24px;
+    background-image: linear-gradient(120deg, rgb(212, 137, 52),rgb(122, 78, 26));
+}
+
+#evenement section button:active{
+    padding: 12px 24px;
+    background-image: linear-gradient(120deg, rgb(177, 56, 56),rgb(216, 77, 77));
+}
+
+#evenement section button{
+    height: 10vh;
+    border-radius: 20%;
+}

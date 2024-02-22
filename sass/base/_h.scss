@@ -1,0 +1,59 @@
+h1 {
+    font-size: clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
+    font-weight: 600;
+    font-style: normal;
+    color: rgba(75, 0, 0, 0.2);
+}
+h2 {
+    font-size: clamp(1rem, -1.292rem + 73335vw, 3.75rem);
+    font-weight: 500;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.2);
+}
+h3 {
+    font-size: clamp(1rem, 1.09rem + -2.114vw, -2.292rem);
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.2);
+}
+h4 {
+    font-size: clamp(1rem, 1.117rem + -2.756vw, -3.292rem);
+    font-weight: 300;
+    font-style: light;
+    color: rgba(0, 0, 0, 0.2);
+}
+h5 {
+    font-size: clamp(1rem, 1.144rem + -3.398vw, -4.292rem);
+    font-weight: 200;
+    font-style: light;
+    color: rgba(0, 0, 0, 0.2);
+}
+h6 {
+    font-size: clamp(1rem, 1.172rem + -4.04vw, -5.292rem);
+    font-weight: 100;
+    font-style: light;
+    color: rgba(0, 0, 0, 0.2);
+}
+footer a{
+    font-size: xx-large;
+    color: white;
+}
+
+footer a:hover{
+    font-size: xx-large;
+    color: blueviolet;
+}
+
+footer a:focus{
+    font-size: xx-large;
+    color: rgb(29, 163, 197);
+}
+
+
+
+footer a:visited{
+    font-size: xx-large;
+    color: grey;
+}
+
+

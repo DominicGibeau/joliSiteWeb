@@ -1,0 +1,264 @@
+/*
+Theme Name: Theme olivier
+Author: Olivier Dorion
+Author URI: https://wordpress.org/
+Description: theme pour le cours de wordpress
+Version: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: theme-olivier
+*/
+:root {
+  /*
+  --couleur-arriere-entete: #a7c03531;
+  --couleur-arriere-accueil: rgb(66, 167, 192, 0.3);
+  --couleur-arriere-evenement: rgba(255, 0, 0, 0.7);
+  --couleur-arriere-galerie: rgb(190, 191, 108);
+  --couleur-arriere-footer: #630;
+  */
+  --u1: 180;
+  --u2: calc(var(--u1) + 180);
+  --u3: calc(var(--u2) - 30);
+  --u4: calc(var(--u2) + 30);
+  --s-arriere: 100%;
+  --s-avant: 50%;
+  --l-arriere: 30%;
+  --l-avant: 20%;
+  --couleur-arriere-entete: hsl(var(--u1),var(--s-arriere), var(--l-arriere)) ;
+  --couleur-arriere-accueil: hsl(var(--u2),var(--s-arriere), var(--l-arriere)) ;
+  --couleur-arriere-evenement: hsl(var(--u3),var(--s-arriere), var(--l-arriere)) ;
+  --couleur-arriere-galerie: hsl(var(--u4),var(--s-arriere), var(--l-arriere)) ;
+  --couleur-arriere-footer: hsl(var(--u1),var(--s-arriere), var(--l-arriere)) ;
+  --couleur-arriere-entete: hsl(var(--u1),var(--s-avant), var(--l-avant)) ;
+  --couleur-arriere-accueil: hsl(var(--u2),var(--s-avant), var(--l-avant)) ;
+  --couleur-arriere-evenement: hsl(var(--u2),var(--s-avant), var(--l-avant)) ;
+  --couleur-arriere-galerie: hsl(var(--u4),var(--s-avant), var(--l-avant)) ;
+  --couleur-arriere-footer: hsl(var(--u1),var(--s-avant), var(--l-avant)) ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.global {
+  display: flex;
+  justify-content: center;
+  min-height: 40vh;
+}
+
+.global > section,
+.global > header,
+.global > footer {
+  flex: 0 1 900px;
+  padding: 3rem 1rem;
+}
+
+#entete,
+#footer {
+  min-height: 20vh;
+}
+
+#entete {
+  background-color: var(--couleur-arriere-entete);
+  color: var(--couleur-arriere-entete);
+  position: relative;
+}
+
+#acceuil {
+  background-color: var(--couleur-arriere-accueil);
+  position: relative;
+}
+
+#evenement {
+  background-color: var(--couleur-arriere-evenement);
+}
+
+#galerie {
+  background-color: var(--couleur-arriere-galerie);
+}
+
+#footer {
+  background-color: var(--couleur-arriere-footer);
+  position: relative;
+}
+
+h1 {
+  font-size: clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
+  font-weight: 600;
+  font-style: normal;
+  color: rgba(75, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: clamp(1rem, -1.292rem + 73335vw, 3.75rem);
+  font-weight: 500;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  font-size: clamp(1rem, 1.09rem - 2.114vw, -2.292rem);
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+  font-size: clamp(1rem, 1.117rem - 2.756vw, -3.292rem);
+  font-weight: 300;
+  font-style: light;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+h5 {
+  font-size: clamp(1rem, 1.144rem - 3.398vw, -4.292rem);
+  font-weight: 200;
+  font-style: light;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+h6 {
+  font-size: clamp(1rem, 1.172rem - 4.04vw, -5.292rem);
+  font-weight: 100;
+  font-style: light;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+  font-size: xx-large;
+  color: white;
+}
+
+footer a:hover {
+  font-size: xx-large;
+  color: blueviolet;
+}
+
+footer a:focus {
+  font-size: xx-large;
+  color: rgb(29, 163, 197);
+}
+
+footer a:visited {
+  font-size: xx-large;
+  color: grey;
+}
+
+#evenement section button {
+  padding: 12px 24px;
+  background-image: linear-gradient(120deg, rgb(69, 155, 112), rgb(160, 255, 208));
+}
+
+#evenement section button:hover {
+  padding: 12px 24px;
+  background-image: linear-gradient(120deg, rgb(212, 137, 52), rgb(122, 78, 26));
+}
+
+#evenement section button:active {
+  padding: 12px 24px;
+  background-image: linear-gradient(120deg, rgb(177, 56, 56), rgb(216, 77, 77));
+}
+
+#evenement section button {
+  height: 10vh;
+  border-radius: 20%;
+}
+
+.entete__header {
+  background-image: url(img/obama.png);
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.vague {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 38px;
+}
+
+.vague .shape-fill {
+  fill: #FFFFFF;
+}
+
+.texteDrole::before {
+  display: block;
+  position: relative;
+  color: black;
+  font-size: 3vw;
+  content: "bonjour";
+  transition: all 0.5s ease-in-out;
+}
+
+.texteDrole:hover::before {
+  display: block;
+  font-size: 5vw;
+  position: relative;
+  color: black;
+  content: "ENVOYER DE L'AIDE JE SUIS PRIT DANS SON SOUS SOL IL ME TORTURE S'IL VOUS PLAIT APPELER LA POLICE";
+}
+
+#evenement section {
+  display: flex;
+  height: 30vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#galerie section img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+}
+
+#galerie section {
+  color: black;
+  display: flex;
+  flex-direction: row;
+}
+
+#galerie section h4 {
+  color: black solid;
+}
+
+.diagonal {
+  position: relative;
+  isolation: isolate;
+  z-index: 2;
+}
+
+.diagonal::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: blue;
+  z-index: -1;
+  transform: skewY(-5deg);
+}
+
+.galerie {
+  position: relative;
+  z-index: 3;
+}/*# sourceMappingURL=style.css.map */

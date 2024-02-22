@@ -1,0 +1,71 @@
+.vague {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.vague svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 38px;
+}
+
+.vague .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+.texteDrole::before{
+    display: block;
+    position: relative;
+    color: black;
+    font-size: 3vw;
+    content:"bonjour";
+    transition: all 0.5s ease-in-out;
+}
+
+.texteDrole:hover::before{
+    display: block;
+    font-size: 5vw;
+    position: relative;
+    color: black;
+    content:"ENVOYER DE L'AIDE JE SUIS PRIT DANS SON SOUS SOL IL ME TORTURE S'IL VOUS PLAIT APPELER LA POLICE";
+}
+
+
+
+#evenement section{
+    display: flex;
+height: 30vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+
+#galerie section img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+}
+#galerie section{
+    color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+#galerie section h4{
+color: black solid ;
+}
+
+
+
+
+
