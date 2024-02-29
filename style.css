@@ -1,12 +1,13 @@
 /*
-Theme Name: Theme olivier
-Author: Olivier Dorion
+Theme Name: Theme dominic
+Author: Dominic Gibeau
 Author URI: https://wordpress.org/
 Description: theme pour le cours de wordpress
 Version: 7.0
+Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-olivier
+Text Domain: theme-dominic
 */
 :root {
   /*
@@ -169,6 +170,24 @@ footer a:visited {
 #evenement section button {
   height: 10vh;
   border-radius: 20%;
+}
+
+.cours {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 1 20%;
+  border: 1px solid white;
+  justify-content: center;
+  padding: 0.5rem;
+  font-size: small;
 }
 
 .entete__header {
