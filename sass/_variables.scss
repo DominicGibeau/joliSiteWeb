@@ -41,3 +41,12 @@
 
 
 }
+
+
+entete{
+    --couleur-arriere-vague: var(--couleur-arriere-galerie) ;
+}
+
+galerie{
+    --couleur-arriere-vague: var(--couleur-arriere-entete) ;
+}

@@ -10,7 +10,7 @@ body {
 .global {
     display: flex;
     justify-content: center;
-    min-height: 40vh;
+ 
 }
 .global > section,
 .global > header,
@@ -20,10 +20,23 @@ body {
    // background-color: rgba(255, 255, 255, 0.1);
 }
 
+.global > .entete__header{
+    flex: 1;
+}
+
 #entete,
 #footer {
     min-height: 20vh;
 }
+
+#menu{
+   
+}
+
+
+
+
+
 #entete {
     background-color: var(--couleur-arriere-entete);
     color: var(--couleur-arriere-entete);

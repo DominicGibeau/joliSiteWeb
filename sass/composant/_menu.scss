@@ -1,0 +1,77 @@
+
+/*
+
+<nav class="menu-principal-container"><ul id="menu-principal" class="menu"><li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-32"><a href="http://localhost/4w4/2024/02/28/bonjour-tout-le-monde/" aria-current="page">Bonjour tout le monde&nbsp;!</a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a href="http://localhost/4w4/2020/10/07/582-5mbtechnologies-emergentes-et-avancees-volet-creation-60h/">Technologies émergentes</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-34"><a href="http://localhost/4w4/2020/10/07/582-3m5imagerie-3d-75h/">Imagerie 3D</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a href="https://www.youtube.com/watch?v=tLKnlzYwVz4">musique épique</a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"><a href="#footer">oui</a></li>
+</ul></nav>
+
+*/
+.menu-principal-container ul{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+list-style-type: none;
+}
+
+.global{
+    background-color: brown;
+    position: relative;
+}
+
+#chk_burger:checked ~ .menu{
+ transform: translateX(0);
+}
+
+
+#chk_burger{
+    display: none;
+}
+
+
+
+.menu {
+    position: absolute;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    flex-direction: column;
+    transform: translateX(300%);
+    transition: all 0.5s;
+  }
+  @media (min-width: 700px) {
+    .menu {
+      position: static;
+      flex-direction: row;
+      display: flex;
+      transform: translateX(0);
+    }
+  }
+  
+ 
+  
+  .menu-item a {
+
+    transition: all 0.5s;
+    color: palevioletred;
+  }
+
+
+/* gestion label #burger l'image svg est dans un label */
+#burger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  @media (min-width: 700px) {
+    #burger {
+      display: none;
+    }
+  }
+  
+  #chk_burger:checked ~  .menu__header .menu {
+    transform: translateX(0);
+  }

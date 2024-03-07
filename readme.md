@@ -20,4 +20,17 @@
    ## utiliser la fonction hsl    
    ## intégrer les vague
    ## intégrer une diagonal 
-  
+  ##
+
+
+
+
+  ## creation d'un header.php
+  -creer le template header qui contien la structure d'entête de la page
+
+  ### création d'un Template-part
+-creer un template qui permet d'afficher la vague
+
+
+
+
