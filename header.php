@@ -15,6 +15,10 @@
 
 <div id="menu" class="global">
 
+
+<h1><?= get_custom_logo(); ?></h1>
+
+
 <input type="checkbox" name="" id="chk_burger">
 <label id="burger" for="chk_burger"> 
     
