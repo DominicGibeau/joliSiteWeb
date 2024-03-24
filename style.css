@@ -29,7 +29,6 @@ Text Domain: theme-dominic
   --couleur-arriere-entete: hsl(var(--u1),var(--s-arriere), var(--l-arriere)) ;
   --couleur-arriere-accueil: hsl(var(--u2),var(--s-arriere), var(--l-arriere)) ;
   --couleur-arriere-evenement: hsl(var(--u3),var(--s-arriere), var(--l-arriere)) ;
-  --couleur-arriere-galerie: hsl(var(--u4),var(--s-arriere), var(--l-arriere)) ;
   --couleur-arriere-footer: hsl(var(--u1),var(--s-arriere), var(--l-arriere)) ;
   --couleur-arriere-entete: hsl(var(--u1),var(--s-avant), var(--l-avant)) ;
   --couleur-arriere-accueil: hsl(var(--u2),var(--s-avant), var(--l-avant)) ;
@@ -38,11 +37,15 @@ Text Domain: theme-dominic
   --couleur-arriere-footer: hsl(var(--u1),var(--s-avant), var(--l-avant)) ;
 }
 
-entete {
+.cartes {
+  --couleur-arriere-galerie: hsl(var(--u4),var(--s-arriere), var(--l-arriere)) ;
+}
+
+#entete {
   --couleur-arriere-vague: var(--couleur-arriere-galerie) ;
 }
 
-galerie {
+#galerie {
   --couleur-arriere-vague: var(--couleur-arriere-entete) ;
 }
 
@@ -189,6 +192,8 @@ footer a:visited {
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 2rem;
+  z-index: 59;
+  background-color: rgb(0, 111, 119);
 }
 
 .carte {
@@ -196,10 +201,19 @@ footer a:visited {
   flex-direction: column;
   justify-content: space-between;
   flex: 0 1 20%;
-  border: 1px solid white;
+  border: 1px solid rgb(139, 11, 11);
   justify-content: center;
   padding: 0.5rem;
   font-size: small;
+  background-color: rgb(173, 10, 10);
+  border-radius: 20px;
+  color: white;
+}
+
+.post-categories {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
 }
 
 .entete__header {
@@ -362,4 +376,195 @@ footer a:visited {
 }
 #chk_burger:checked ~ .menu__header .menu {
   transform: translateX(0);
+}
+
+/* variable sass
+
+// pallette de couleur
+*/
+:root {
+  /*
+  --couleur-arriere-entete: #a7c03531;
+  --couleur-arriere-accueil: rgb(66, 167, 192, 0.3);
+  --couleur-arriere-evenement: rgba(255, 0, 0, 0.7);
+  --couleur-arriere-galerie: rgb(190, 191, 108);
+  --couleur-arriere-footer: #630;
+  */
+  --u1: 180;
+  --u2: calc(var(--u1) + 180);
+  --u3: calc(var(--u2) - 30);
+  --u4: calc(var(--u2) + 30);
+  --s-arriere: 100%;
+  --s-avant: 50%;
+  --l-arriere: 30%;
+  --l-avant: 20%;
+  --couleur-arriere-entete: hsl(var(--u1),var(--s-arriere), var(--l-arriere)) ;
+  --couleur-arriere-accueil: hsl(var(--u2),var(--s-arriere), var(--l-arriere)) ;
+  --couleur-arriere-evenement: hsl(var(--u3),var(--s-arriere), var(--l-arriere)) ;
+  --couleur-arriere-footer: hsl(var(--u1),var(--s-arriere), var(--l-arriere)) ;
+  --couleur-arriere-entete: hsl(var(--u1),var(--s-avant), var(--l-avant)) ;
+  --couleur-arriere-accueil: hsl(var(--u2),var(--s-avant), var(--l-avant)) ;
+  --couleur-arriere-evenement: hsl(var(--u2),var(--s-avant), var(--l-avant)) ;
+  --couleur-arriere-galerie: hsl(var(--u4),var(--s-avant), var(--l-avant)) ;
+  --couleur-arriere-footer: hsl(var(--u1),var(--s-avant), var(--l-avant)) ;
+}
+
+.cartes {
+  --couleur-arriere-galerie: hsl(var(--u4),var(--s-arriere), var(--l-arriere)) ;
+}
+
+#entete {
+  --couleur-arriere-vague: var(--couleur-arriere-galerie) ;
+}
+
+#galerie {
+  --couleur-arriere-vague: var(--couleur-arriere-entete) ;
+}
+
+.clr-primaire-100 {
+  color: hsl(220, 100%, 85%);
+}
+
+.bck-primaire-100 {
+  background-color: hsl(220, 100%, 85%);
+}
+
+.clr-primaire-200 {
+  color: hsl(220, 100%, 60%);
+}
+
+.bck-primaire-200 {
+  background-color: hsl(220, 100%, 60%);
+}
+
+.clr-primaire-300 {
+  color: hsl(220, 100%, 30%);
+}
+
+.bck-primaire-300 {
+  background-color: hsl(220, 100%, 30%);
+}
+
+.clr-primaire-400 {
+  color: hsl(220, 100%, 15%);
+}
+
+.bck-primaire-400 {
+  background-color: hsl(220, 100%, 15%);
+}
+
+.clr-secondaire-100 {
+  color: hsl(40, 100%, 85%);
+}
+
+.bck-secondaire-100 {
+  background-color: hsl(40, 100%, 85%);
+}
+
+.clr-secondaire-200 {
+  color: hsl(40, 100%, 50%);
+}
+
+.bck-secondaire-200 {
+  background-color: hsl(40, 100%, 50%);
+}
+
+.clr-secondaire-300 {
+  color: hsl(40, 100%, 30%);
+}
+
+.bck-secondaire-300 {
+  background-color: hsl(40, 100%, 30%);
+}
+
+.clr-secondaire-400 {
+  color: hsl(40, 100%, 15%);
+}
+
+.bck-secondaire-400 {
+  background-color: hsl(40, 100%, 15%);
+}
+
+.clr-ternaire-100 {
+  color: hsl(9, 57%, 55%);
+}
+
+.bck-ternaire-100 {
+  background-color: hsl(9, 57%, 55%);
+}
+
+.clr-ternaire-200 {
+  color: hsl(10, 100%, 50%);
+}
+
+.bck-ternaire-200 {
+  background-color: hsl(10, 100%, 50%);
+}
+
+.clr-ternaire-300 {
+  color: hsl(10, 100%, 30%);
+}
+
+.bck-ternaire-300 {
+  background-color: hsl(10, 100%, 30%);
+}
+
+.clr-ternaire-400 {
+  color: hsl(10, 100%, 15%);
+}
+
+.bck-ternaire-400 {
+  background-color: hsl(10, 100%, 15%);
+}
+
+.clr-vert-100 {
+  color: hsl(70, 100%, 85%);
+}
+
+.bck-vert-100 {
+  background-color: hsl(70, 100%, 85%);
+}
+
+.clr-vert-200 {
+  color: hsl(70, 100%, 50%);
+}
+
+.bck-vert-200 {
+  background-color: hsl(70, 100%, 50%);
+}
+
+.clr-vert-300 {
+  color: hsl(70, 100%, 30%);
+}
+
+.bck-vert-300 {
+  background-color: hsl(70, 100%, 30%);
+}
+
+.clr-vert-400 {
+  color: hsl(70, 100%, 15%);
+}
+
+.bck-vert-400 {
+  background-color: hsl(70, 100%, 15%);
+}
+
+.clr-agencement-primaire {
+  color: hsl(220, 100%, 15%);
+  background-image: linear-gradient(90deg, hsl(220, 100%, 85%), hsl(220, 100%, 60%));
+}
+
+.clr-agencement-secondaire {
+  color: hsl(40, 100%, 15%);
+  background-color: hsl(40, 100%, 85%);
+}
+
+.clr-agencement-ternaire {
+  color: hsl(10, 100%, 15%);
+  background-image: linear-gradient(90deg, hsl(10, 100%, 30%), hsl(10, 100%, 15%));
+}
+
+.clr-agencement-vert {
+  color: hsl(70, 100%, 15%);
+  background-color: hsl(70, 100%, 85%);
 }/*# sourceMappingURL=style.css.map */

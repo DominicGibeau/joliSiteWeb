@@ -1,3 +1,5 @@
+
+
 :root {
     /*
     --couleur-arriere-entete: #a7c03531;
@@ -28,7 +30,7 @@
 --couleur-arriere-entete: hsl(var(--u1),var(--s-arriere), var(--l-arriere)) ;
 --couleur-arriere-accueil: hsl(var(--u2),var(--s-arriere), var(--l-arriere)) ;
 --couleur-arriere-evenement: hsl(var(--u3),var(--s-arriere), var(--l-arriere)) ;
---couleur-arriere-galerie: hsl(var(--u4),var(--s-arriere), var(--l-arriere)) ;
+
 --couleur-arriere-footer: hsl(var(--u1),var(--s-arriere), var(--l-arriere)) ;
 
 
@@ -41,12 +43,14 @@
 
 
 }
+.cartes{
+    --couleur-arriere-galerie: hsl(var(--u4),var(--s-arriere), var(--l-arriere)) ;
+}
 
-
-entete{
+#entete{
     --couleur-arriere-vague: var(--couleur-arriere-galerie) ;
 }
 
-galerie{
+#galerie{
     --couleur-arriere-vague: var(--couleur-arriere-entete) ;
 }
